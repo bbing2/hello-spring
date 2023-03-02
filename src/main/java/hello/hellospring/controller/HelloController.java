@@ -1,4 +1,4 @@
-package hello.hello.spring.controller;
+package hello.hellospring.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -6,14 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.naming.Name;
-
 @Controller
 public class HelloController {
-  @GetMapping("hello")
+  @GetMapping("hello/hellospring")
   public String hello(Model model) {
     model.addAttribute("data", "hello!!");
-    return "hello";
+    return "hello/hellospring";
 
   }
 
@@ -26,7 +24,7 @@ public class HelloController {
   @GetMapping("hello-String")
   @ResponseBody
   public String helloString(@RequestParam("name") String name) {
-    return "hello " + name;
+    return "hello/hellospring " + name;
   }
 
   @GetMapping("hello-api")
